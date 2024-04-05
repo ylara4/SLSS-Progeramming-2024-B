@@ -40,3 +40,5 @@ for _ in range(10):
             print(f"{counter} is an even number.")
 
         counter += 1 
+
+        
