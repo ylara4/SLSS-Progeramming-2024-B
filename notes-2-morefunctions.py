@@ -39,3 +39,18 @@ print(stars(0))
 print(stars(1))
 print(stars(1000))
 print(stars(-1))
+
+def biggest_of_three(num):
+    if num == 10 or num = 100:
+        value = "Smallest"
+    
+    elif num > 1000:
+        value = "Biggest"
+
+    else: 
+        value = "Nope"
+
+    return value
+
+    
+
