@@ -24,21 +24,13 @@ def stars(num):
     return value
 
 
-# Multiply strings 
-greeting = "hello"
-print(greeting * 100)
 
-print("the quick brown fox jumps over the lazy dog" * 2)
 
 print(stars(10)) #"**********"
 print(stars(1000)) #"**********"
 print(stars(0))
 
 
-print(stars(0))
-print(stars(1))
-print(stars(1000))
-print(stars(-1))
 
 
 
