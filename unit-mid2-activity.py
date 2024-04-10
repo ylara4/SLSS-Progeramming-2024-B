@@ -48,7 +48,7 @@ print(stars(0))
 student_boys = input("How many boys are in this class?👨🏻‍🎓")
 if student_boys == "3": 
      print("That's correct!😃")
-     if student_boys == "6":
+elif student_boys == "6":
           print("That's the total amount of students, not boys.🫤")
 
 # Ask the user how many girls are in this class
