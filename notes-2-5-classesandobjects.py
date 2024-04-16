@@ -18,6 +18,22 @@ class Pokemon:
         self.weight = 0
         self.height = 0
         self.type = "Normal"
+        self.actual_cry = "Roooooar"
+        
+def cry(self) -> str:
+            """Represents the sound of a pokemon"""
+            return self.actual_cry
+
+def consume(self, item: str) -> str:
+      """Pokemon consumes the item"""
+      if item.lower() == "berry":
+            return f"{self.name} eats the berry"
+      elif item.lower() == "potion":
+            return f"{self.name} feels much better after the potion!"
+      else:
+            return f"{self.name} batted away the {item}"
+
+
 def main():
     pokemon_one = Pokemon()
     print(pokemon_one.name)
@@ -45,6 +61,13 @@ def main():
     pokemon_two.id = 4
     print(pokemon_two.name)
     print(pokemon_two.type)
+
+    print(pokemon_one.actual_cry())
+    print(pokemon_two.actual_cry())
+
+    print(pokemon_one.consume("berry"))
+    print(pokemon_one.consume("potion"))
+    print(pokemon_one.consume("poison"))
     pass
 
 if __name__ == "__main__":
