@@ -35,21 +35,22 @@ def consume(self, item: str) -> str:
       else:
             return f"{self.name} batted away the {item}"
       
-      class Pikachu(Pokemon):
-            def __init__(self, name= "Pikachu"):
-                  super().__init__()
+class Pikachu(Pokemon):
+      def __init__(self, name= "Pikachu"):
+            super().__init__()
 
-                  self.name = __name__
-                  self.id = 25
-                  self.type = "Electric"
+self.name = __name__
+self.id = 25
+self.type = "Electric"
 
                   
-      def thunder(self) -> str:
-            """Represents the thunder attack"""
-            return f"{self.name} used Thunder"
+def thunder(self) -> str:
+      """Represents the thunder attack"""
+      return f"{self.name} used Thunder"
       response = ""
 
-    def main():
+    
+def main():
     pokemon_one = Pokemon()
     print(pokemon_one.name)
     print(pokemon_one.type)
@@ -96,4 +97,6 @@ def consume(self, item: str) -> str:
 
 if __name__ == "__main__":
     main()
+
+    
 
