@@ -39,6 +39,8 @@ def start():
     clock = pygame.time.Clock()
 
     dvdlogo = Dvdlogo()
+    dvdlogo.rect.centerx = WIDTH // 640
+    dvdlogo.rect.centery = HEIGHT // 360
 
     all_sprites = pygame.sprite.Group()
     all_sprites.add(dvdlogo)
