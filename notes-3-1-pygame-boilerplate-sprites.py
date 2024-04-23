@@ -3,14 +3,14 @@
 # - sprite class
 
 import pygame
-from pygame.sprite import _Group
 
 # child class of Sprite
 # -represent the dvd logo
-class DVdlogo(pygame.sprite.Sprite):
+class Dvdlogo(pygame.sprite.Sprite):
     """represents the DVD logo"""
     def __init__(self): 
-        self.image = pygame.image.load("./Images/dvd-logo.png")
+        super().__init__()
+        self.image = pygame.image.load("./Images/dvd.png")
 
         self.rect = self.image.get_rect() # first position of the image in top right
 
@@ -38,7 +38,12 @@ def start():
     done = False
     clock = pygame.time.Clock()
 
-    pygame.display.set_caption("<WINDOW TITLE HERE>")
+    dvdlogo = Dvdlogo()
+
+    all_sprites = pygame.sprite.Group()
+    all_sprites.add(dvdlogo)
+
+    pygame.display.set_caption("<DVD SCREEN SAVER>")
 
     # --MAIN LOOP--
     while not done:
@@ -51,6 +56,10 @@ def start():
 
         # --- Draw items
         screen.fill(BLACK)
+
+        all_sprites.draw(screen)
+
+        
       
         # Update the screen with anything new
         pygame.display.flip()
