@@ -12,7 +12,20 @@ class Dvdlogo(pygame.sprite.Sprite):
         super().__init__()
         self.image = pygame.image.load("./Images/dvd.png")
 
-        self.rect = self.image.get_rect() # first position of the image in top right
+        self.rect = self.image.get_rect()
+        
+         # first position of the image in top right
+        
+        self.vel_x = 3
+        self.vel_y = 0
+
+        def update(self): 
+            self.rect.x += self.vel_x
+            self.rect.y += self.vel_y
+
+            if self.rect.right >= 1280:
+                self.vel_x *= -self.vel_x
+            print(self.rect.x, self.rect.y)
 
 def start():
     """Environment Setup and Game Loop"""
@@ -55,6 +68,10 @@ def start():
                 done = True
 
 		# --- Update the world state
+            dvdlogo.rect.x = dvdlogo.rect.x + dvdlogo.vel_x
+            dvdlogo.rect.y += dvdlogo.vel_y 
+
+        
 
         # --- Draw items
         screen.fill(BLACK)
