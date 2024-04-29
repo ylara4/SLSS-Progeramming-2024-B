@@ -1,5 +1,4 @@
 import pygame as pg
-from pygame.sprite import _Group
 
 # --CONSTANTS--
 # COLOURS
@@ -14,25 +13,6 @@ GRAY = (128, 128, 128)
 WIDTH = 1280  # Pixels
 HEIGHT = 720
 SCREEN_SIZE = (WIDTH, HEIGHT)
-class snowflake(pg.sprite.Sprite):
-    def __init__(self, size: int):
-        self.image = pg.Surface((size, size))
-
-       
-
-        pg.draw.circle(
-            self.image,
-            WHITE,
-            (size // 2, size // 2),
-            size // 2
-        )
-
-
-        self.rect = self.image.get_rect()
-        self.rect.centerx = WIDTH // 2
-        self.rect.centery = HEIGHT // 2
-
-        super().__init__()
 
 
 def start():
@@ -47,7 +27,6 @@ def start():
 
     # All sprites go in this sprite Group
     all_sprites = pg.sprite.Group()
-    all_sprites.add(snowflake(10))
 
     pg.display.set_caption("<WINDOW TITLE HERE>")
 
@@ -59,11 +38,9 @@ def start():
                 done = True
 
         # --- Update the world state
-                all_sprites.update()
 
         # --- Draw items
         screen.fill(BLACK)
-        all_sprites.draw(screen)
 
         # Update the screen with anything new
         pg.display.flip()
@@ -78,6 +55,17 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+
+
+
+
+
+
+
+
 
 
 
