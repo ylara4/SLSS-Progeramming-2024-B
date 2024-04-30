@@ -1,3 +1,5 @@
+import random
+
 import pygame as pg
 
 # --CONSTANTS--
@@ -27,6 +29,7 @@ def start():
 
     # All sprites go in this sprite Group
     all_sprites = pg.sprite.Group()
+    
 
     pg.display.set_caption("<WINDOW TITLE HERE>")
 
