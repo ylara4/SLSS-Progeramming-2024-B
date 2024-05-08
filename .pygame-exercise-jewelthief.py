@@ -198,6 +198,8 @@ def start():
             for sprite in enemy_sprites:
                 sprite.increase_speed()
 
+               
+
         # --- Draw items
         screen.fill(WHITE)
 
