@@ -23,7 +23,7 @@ class Player(pg.sprite.Sprite):
         self.image - pg.image.load("./Images/galaga_ship.png")
         self.image = pg.transform.scale()
         self.image,
-        (self.image.get_widt() // 2, self.image.get_height(); // 2)))
+        (self.image.get_widt()) // 2, self.image.get_height(); // 2)))
         self.rect = self.image.get_rect()
 
         def update(self):
