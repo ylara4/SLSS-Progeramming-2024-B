@@ -201,7 +201,7 @@ def start():
                
 
         # --- Draw items
-        screen.fill(WHITE)
+        screen.fill(RED)
 
         all_sprites.draw(screen)
 
