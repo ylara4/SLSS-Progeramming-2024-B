@@ -1,4 +1,4 @@
-# Pygame Project: 
+# Pygame Project: Flappy Bird 
 # Yeshua Lara
 # May 27, 2024
 
@@ -6,7 +6,6 @@
 import pygame, random, time
 from pygame.locals import *
 
-#VARIABLES
 SCREEN_WIDHT = 400
 SCREEN_HEIGHT = 600
 SPEED = 20
@@ -39,7 +38,7 @@ class Bird(pygame.sprite.Sprite):
         self.speed = SPEED
 
         self.current_image = 0
-        self.image = pygame.image.load("./Images/bluebird-upflap.png'").convert_alpha()
+        self.image = pygame.image.load("./Images/bluebird-upflap.png").convert_alpha()
         self.mask = pygame.mask.from_surface(self.image)
 
         self.rect = self.image.get_rect()
@@ -50,8 +49,6 @@ class Bird(pygame.sprite.Sprite):
         self.current_image = (self.current_image + 1) % 3
         self.image = self.images[self.current_image]
         self.speed += GRAVITY
-
-        #UPDATE HEIGHT
         self.rect[1] += self.speed
 
     def bump(self):
@@ -69,7 +66,7 @@ class Pipe(pygame.sprite.Sprite):
     def __init__(self, inverted, xpos, ysize):
         pygame.sprite.Sprite.__init__(self)
 
-        self. image = pygame.image.load("./Images/pipe-green.png'").convert_alpha()
+        self. image = pygame.image.load("./Images/pipe-green.png").convert_alpha()
         self.image = pygame.transform.scale(self.image, (PIPE_WIDHT, PIPE_HEIGHT))
 
 
@@ -95,7 +92,7 @@ class Ground(pygame.sprite.Sprite):
     
     def __init__(self, xpos):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.image.load("./Images/base.png'").convert_alpha()
+        self.image = pygame.image.load("./Images/base.png").convert_alpha()
         self.image = pygame.transform.scale(self.image, (GROUND_WIDHT, GROUND_HEIGHT))
 
         self.mask = pygame.mask.from_surface(self.image)
